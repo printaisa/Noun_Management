@@ -16,6 +16,9 @@
 	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/jstl-1.2.jar"/>
 	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/jstl-api-1.2.jar"/>
 	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/jstl-impl-1.2.jar"/>
-	<classpathentry kind="lib" path="C:/Users/masataka/Downloads/pleiades-2021-06-java-win-64bit-jre_20210629/pleiades/tomcat/9/lib/servlet-api.jar"/>
+	<classpathentry kind="lib" path="C:/Users/masataka/Downloads/javamail1_4_5/javamail-1.4.5/lib/imap.jar"/>
+	<classpathentry kind="lib" path="C:/Users/masataka/Downloads/additionnal.jar"/>
+	<classpathentry kind="lib" path="C:/Users/masataka/Downloads/activation.jar"/>
+	<classpathentry kind="lib" path="C:/Users/masataka/Downloads/mail.jar"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>

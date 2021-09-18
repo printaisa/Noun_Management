@@ -20,7 +20,7 @@ public class MailPassDAO {
 			conn = DriverManager.getConnection("jdbc:mysql://localhost/Sample_db","root","6gatu10kaBAIKINN");
 
 			// SELECT文を準備する
-			String sql = "select count(*) from MailPass where mail = ? and pass = ?";
+			String sql = "select count(*) from mapw where mail = ? and pass = ?";
 			PreparedStatement pStmt = conn.prepareStatement(sql);
 			pStmt.setString(1, mail);
 			pStmt.setString(2, pass);

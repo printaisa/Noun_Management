@@ -4,7 +4,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <link rel ="stylesheet" href="../css/Design.css">
+    <link rel ="stylesheet" href="/GurmetSearch/css/Design.css">
     <title>Gourme Search</title>
 </head>
 
@@ -13,13 +13,13 @@
 	    <div class="header-logo"><img src="img/グルサーチロゴ.png" alt="グルサーチロゴ" width="150px" height="100px"></div>
 	    <div class="header-list">
 		    <ul>
-			    <li><a href="Toppage.html" style="color:azure;text-decoration: none;">サービスについて</a></li>
-			    <li><a href="Preresist.jsp" class="btn-sticky">新規会員登録</a></li>
-			    <li><a href="Login.jsp" class="btn-sticky">ログイン</a></li>
+			    <li><a href="/GurmetSearch/ServletSample" style="color:azure;text-decoration: none;">サービスについて</a></li>
+			    <li><a href="/GurmetSearch/PreresistServlet" class="btn-sticky">新規会員登録</a></li>
+			    <li><a href="/GurmetSearch/LoginServlet" class="btn-sticky">ログイン</a></li>
 		    </ul>
 	    </div>
     </div>
-    <div align="center">
+    <div align="center" style="margin-top:100px">
 	    <div style="background: rgb(255, 255, 255); width: 80%; font-size: 100%;">
 		    <div align="center">
 		        <h1 id="about" class="text-white"><span class="sample2">お店を探す</span></h1>
@@ -34,7 +34,7 @@
 		                <tbody>
 		                    <div class ="cp_ipselect">
 		                        <select name="prefecture" class="cp_sl06" required>
-		                            <option value="" hidden disabled selected></option>
+		                            <option value="" disabled selected></option>
 		                            <option value="1">北海道</option><option value="2">青森県</option> <option value="3">岩手県</option>
 		                            <option value="4">宮城県</option><option value="5">秋田県</option><option value="6">山形県</option>
 		                            <option value="7">福島県</option><option value="8">茨城県</option><option value="9">栃木県</option>
@@ -49,7 +49,7 @@
 		                            <option value="34">広島県</option><option value="35">山口県</option><option value="36">徳島県</option>
 		                            <option value="37">香川県</option><option value="38">愛媛県</option><option value="39">高知県</option>
 		                            <option value="40">福岡県</option><option value="41">佐賀県</option><option value="42">長崎県</option>
-		                            <option value="43">熊本県</option><option value="https://tb-220376.tech-base.net/Oita.php">大分県</option><option value="45">宮崎県</option>
+		                            <option value="43">熊本県</option><option value="/GurmetSearch/jsp/Oita.jsp">大分県</option><option value="45">宮崎県</option>
 		                            <option value="46">鹿児島県</option><option value="47">沖縄県</option>
 		                        </select>
 		                        <span class="cp_sl06_highlight"></span>

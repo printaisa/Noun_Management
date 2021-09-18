@@ -13,16 +13,13 @@
 	    <div class="header-logo"><img src="../img/グルサーチロゴ.png" alt="グルサーチロゴ" width="150px" height="100px"></div>
 	    <div class="header-list">
 		    <ul>
-			    <li><a href="../Toppage.html" style="color:azure;text-decoration: none;">サービスについて</a></li>
+			    <li><a href="/GurmetSearch/ServletSample" style="color:azure;text-decoration: none;">サービスについて</a></li>
 			    <li><a href="Preresist.jsp" class="btn-sticky">新規会員登録</a></li>
 			    <li><a href="Login.jsp" class="btn-sticky">ログイン</a></li>
 		    </ul>
 	    </div>
     </div>
-    <br>
-    <br>
-    <br>
-    <div class="bg_teste">
+    <div class="bg_teste"  style="margin-top:100px">
     <div class="bg_test-text">
     <div align="center">
         <h1 id="about" class="text-white"><span class="sample2">ログインページ</span></h1>

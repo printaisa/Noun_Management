@@ -14,8 +14,8 @@
 	    <div class="header-list">
 		    <ul>
 			    <li><a href="/GurmetSearch/ServletSample" style="color:azure;text-decoration: none;">サービスについて</a></li>
-			    <li><a href="/GurmetSearch/PreresistServlet" class="btn-sticky">新規会員登録</a></li>
-			    <li><a href="/GurmetSearch/LoginServlet" class="btn-sticky">ログイン</a></li>
+			    <li><a href="/GurmetSearch/jsp/Preresist.jsp" class="btn-sticky">新規会員登録</a></li>
+			    <li><a href="/GurmetSearch/jsp/Login.jsp" class="btn-sticky">ログイン</a></li>
 		    </ul>
 	    </div>
     </div>

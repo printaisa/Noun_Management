@@ -1,13 +1,13 @@
 package dao;
 
 import java.sql.Connection;
-import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
+import db.DBConnect;
 import model.Bc;
 
 public class BcDAO {
@@ -17,11 +17,8 @@ public class BcDAO {
 		List<Bc> cardList = new ArrayList<Bc>();
 
 		try {
-			// JDBCドライバを読み込む
-			Class.forName("com.mysql.jdbc.Driver");
-
 			// データベースに接続する
-			conn = DriverManager.getConnection("jdbc:mysql://localhost/Sample_db","root","6gatu10kaBAIKINN");
+			conn = DBConnect.getConnection();
 
 			// SQL文を準備する
 			String sql = "select NUMBER, NAME, ADDRESS from BC WHERE NUMBER LIKE ? AND NAME LIKE ? AND ADDRESS LIKE ? ORDER BY NUMBER";
@@ -67,6 +64,9 @@ public class BcDAO {
 		catch (ClassNotFoundException e) {
 			e.printStackTrace();
 			cardList = null;
+		} catch (Exception e) {
+			// TODO 自動生成された catch ブロック
+			e.printStackTrace();
 		}
 		finally {
 			// データベースを切断
@@ -91,11 +91,8 @@ public class BcDAO {
 		boolean result = false;
 
 		try {
-			// JDBCドライバを読み込む
-			Class.forName("com.mysql.jdbc.Driver");
-
 			// データベースに接続する
-			conn = DriverManager.getConnection("jdbc:mysql://localhost/Sample_db","root","6gatu10kaBAIKINN");
+			conn = DBConnect.getConnection();
 
 			// SQL文を準備する
 			String sql = "insert into BC (NUMBER, NAME, ADDRESS) values (?, ?, ?)";
@@ -131,6 +128,9 @@ public class BcDAO {
 		}
 		catch (ClassNotFoundException e) {
 			e.printStackTrace();
+		} catch (Exception e) {
+			// TODO 自動生成された catch ブロック
+			e.printStackTrace();
 		}
 		finally {
 			// データベースを切断
@@ -154,11 +154,8 @@ public class BcDAO {
 		boolean result = false;
 
 		try {
-			// JDBCドライバを読み込む
-						Class.forName("com.mysql.jdbc.Driver");
-
-		   // データベースに接続する
-						conn = DriverManager.getConnection("jdbc:mysql://localhost/Sample_db","root","6gatu10kaBAIKINN");
+			// データベースに接続する
+			conn = DBConnect.getConnection();
 
 			// SQL文を準備する
 			String sql = "update BC set NAME=?, ADDRESS=? where NUMBER=?";
@@ -189,6 +186,9 @@ public class BcDAO {
 		}
 		catch (ClassNotFoundException e) {
 			e.printStackTrace();
+		} catch (Exception e) {
+			// TODO 自動生成された catch ブロック
+			e.printStackTrace();
 		}
 		finally {
 			// データベースを切断
@@ -212,11 +212,8 @@ public class BcDAO {
 		boolean result = false;
 
 		try {
-			// JDBCドライバを読み込む
-						Class.forName("com.mysql.jdbc.Driver");
-
-		   // データベースに接続する
-						conn = DriverManager.getConnection("jdbc:mysql://localhost/Sample_db","root","6gatu10kaBAIKINN");
+			// データベースに接続する
+			conn = DBConnect.getConnection();
 
 			// SQL文を準備する
 			String sql = "delete from BC where NUMBER=?";
@@ -234,6 +231,9 @@ public class BcDAO {
 			e.printStackTrace();
 		}
 		catch (ClassNotFoundException e) {
+			e.printStackTrace();
+		} catch (Exception e) {
+			// TODO 自動生成された catch ブロック
 			e.printStackTrace();
 		}
 		finally {

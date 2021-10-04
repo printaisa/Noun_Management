@@ -1,10 +1,11 @@
 package dao;
 
 import java.sql.Connection;
-import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+
+import db.DBConnect;
 
 public class IdpwDAO {
 	// ログインできるならtrueを返す
@@ -13,11 +14,8 @@ public class IdpwDAO {
 		boolean loginResult = false;
 
 		try {
-			// JDBCドライバを読み込む
-			Class.forName("com.mysql.jdbc.Driver");
-
 			// データベースに接続する
-			conn = DriverManager.getConnection("jdbc:mysql://localhost/Sample_db","root","6gatu10kaBAIKINN");
+			conn = DBConnect.getConnection();
 
 			// SELECT文を準備する
 			String sql = "select count(*) from IDPW where ID = ? and PW = ?";
@@ -41,18 +39,9 @@ public class IdpwDAO {
 		catch (ClassNotFoundException e) {
 			e.printStackTrace();
 			loginResult = false;
-		}
-		finally {
-			// データベースを切断
-			if (conn != null) {
-				try {
-					conn.close();
-				}
-				catch (SQLException e) {
-					e.printStackTrace();
-					loginResult = false;
-				}
-			}
+		} catch (Exception e) {
+			// TODO 自動生成された catch ブロック
+			e.printStackTrace();
 		}
 
 		// 結果を返す

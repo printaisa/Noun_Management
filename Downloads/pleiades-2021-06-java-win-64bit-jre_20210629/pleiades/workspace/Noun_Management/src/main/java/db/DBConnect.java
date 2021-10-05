@@ -13,7 +13,7 @@ public class DBConnect {
 	    //各設定
 	    String url = "jdbc:mysql://localhost/Sample_db";
 	    String user = "root";
-	    String pass = "6gatu10kaBAIKINN";
+	    String pass = "";
 	    //データベースに接続
 	 // データベースに接続する
 	 	conn = DriverManager.getConnection(url,user,pass);

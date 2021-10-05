@@ -18,7 +18,7 @@ public class BcDAO {
 			conn = DBConnect.getConnection();
 
 			// SQL文を準備する
-			String sql = "insert into mapw (mail,pass) values (?, ?)";
+			String sql = "insert into mailpass (mail,pass) values (?, ?)";
 			PreparedStatement pStmt = conn.prepareStatement(sql);
 
 			// SQL文を完成させる
@@ -75,7 +75,7 @@ public class BcDAO {
 			conn = DBConnect.getConnection();
 
 			// SQL文を準備する
-			String sql = "update mapw set mail=?, pass=? where mail=?";
+			String sql = "update mailpass set mail=?, pass=? where mail=?";
 			PreparedStatement pStmt = conn.prepareStatement(sql);
 
 			// SQL文を完成させる
@@ -138,7 +138,7 @@ public class BcDAO {
 			conn = DBConnect.getConnection();
 
 			// SQL文を準備する
-			String sql = "delete from BC where id=?";
+			String sql = "delete from mailpass where id=?";
 			PreparedStatement pStmt = conn.prepareStatement(sql);
 
 			// SQL文を完成させる

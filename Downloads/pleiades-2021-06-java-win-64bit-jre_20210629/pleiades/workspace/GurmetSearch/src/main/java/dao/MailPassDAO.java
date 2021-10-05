@@ -5,7 +5,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-//import db.CreateDB;
+import db.CreateDB;
 import db.DBConnect;
 
 public class MailPassDAO {
@@ -18,9 +18,9 @@ public class MailPassDAO {
 			// データベースに接続する
 			conn = DBConnect.getConnection();
 			//なければテーブル作成
-			//CreateDB.Createmapw();
+			CreateDB.Createmapw();
 			// SELECT文を準備する
-			String sql = "select count(*) from mapw where mail = ? and pass = ?";
+			String sql = "select count(*) from mailpass where mail = ? and pass = ?";
 			PreparedStatement pStmt = conn.prepareStatement(sql);
 			pStmt.setString(1, mail);
 			pStmt.setString(2, pass);

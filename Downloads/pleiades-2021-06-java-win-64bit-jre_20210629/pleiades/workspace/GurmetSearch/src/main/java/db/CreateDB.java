@@ -9,10 +9,15 @@ public class CreateDB {
 		PreparedStatement psCreate = null;
 		// データベースに接続する
 		con = DBConnect.getConnection();
-
-		String sql = "create table(if not exists) Sample_db.ma (id int not null auto_increment primary key , mail char(40) unique, pass varchar(255));";
+		//sql文作成
+		String sql = "CREATE TABLE IF NOT EXISTS mailpass(\n"
+				+ "id INTEGER NOT NULL AUTO_INCREMENT,\n"
+				+ "mail VARCHAR(128) NOT NULL, \n"
+				+ "pass VARCHAR(50) NOT NULL, \n"
+				+ "PRIMARY KEY(id) \n"
+				+ ");";
 		psCreate = con.prepareStatement(sql);
-        psCreate.execute();
+        psCreate.executeUpdate();
 		
 	    return con;
 	  }
